@@ -18,7 +18,7 @@ import javax.persistence.Table;
 public class Sale {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long idLong;
+private Long id;
 private Integer visited;
 private Integer deals;
 private Double amount;
@@ -33,8 +33,8 @@ public Sale() {
 	
 }
 
-public Sale(Long idLong, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
-	this.idLong = idLong;
+public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
+	this.id = id;
 	this.visited = visited;
 	this.deals = deals;
 	this.amount = amount;
@@ -42,12 +42,12 @@ public Sale(Long idLong, Integer visited, Integer deals, Double amount, LocalDat
 	this.seller = seller;
 }
 
-public Long getIdLong() {
-	return idLong;
+public Long getId() {
+	return id;
 }
 
-public void setIdLong(Long idLong) {
-	this.idLong = idLong;
+public void setId(Long id) {
+	this.id = id;
 }
 
 public Integer getVisited() {
